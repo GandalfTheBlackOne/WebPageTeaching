@@ -40,7 +40,7 @@ var Test = /*#__PURE__*/function (_React$Component) {
   _createClass(Test, [{
     key: "render",
     value: function render() {
-      var wb = _xlsx.default.readFile("../data/employee.csv");
+      var wb = _xlsx.default.readFile("../sj_master_2020_AUG_dummy.csv");
 
       var first_worksheet = wb.Sheets[wb.SheetNames[0]];
 

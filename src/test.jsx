@@ -1,7 +1,7 @@
 import XLSX from 'xlsx';
 class Test extends React.Component {
     render() {
-        var wb = XLSX.readFile("../data/employee.csv");
+        var wb = XLSX.readFile("../sj_master_2020_AUG_dummy.csv");
         var first_worksheet = wb.Sheets[wb.SheetNames[0]];
         var data = XLSX.utils.sheet_to_json(first_worksheet, { header: 1 });
 

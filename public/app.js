@@ -27,7 +27,7 @@ var XLSX = require('xlsx');
 var _require = require('fs'),
     realpathSync = _require.realpathSync;
 
-var workbook = XLSX.readFile('sj_master_2020_AUG_dummy.csv');
+var workbook = XLSX.readFile('../sj_master_2020_AUG_dummy.csv');
 var data = XLSX.utils.sheet_to_json;
 var header = ['ID', 'Name', 'Address', 'Gender', 'Designation', 'Age'];
 

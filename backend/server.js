@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static('public'));
 
 var path = '../data/sj_master_2020_AUG_dummy.xlsx';
-let buffer = new Buffer.from('../sj_master_2020_AUG_dummy.xlsx');
+let buffer = new Buffer.from('../data/sj_master_2020_AUG_dummy.xlsx');
 fs.open(path, 'a', function(err, fd) {
     if(err) {
         console.log('Cant open file');
@@ -24,7 +24,7 @@ fs.open(path, 'a', function(err, fd) {
 var bufferR = new Buffer.alloc(1023);
 
 console.log("Open existing file");
-fs.open('data/sj_master_2020_AUG_dummy.csv', 'r+', function (err, fd) {
+fs.open('../sj_master_2020_AUG_dummy.csv', 'r+', function (err, fd) {
     if (err) {
         return console.error(err);
     }
