@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static('public'));
 
 var path = '../data/sj_master_2020_AUG_dummy.xlsx';
-let buffer = new Buffer.from('../data/sj_master_2020_AUG_dummy.xlsx');
+let buffer = new Buffer.from('../sj_master_2020_AUG_dummy.xlsx');
 fs.open(path, 'a', function(err, fd) {
     if(err) {
         console.log('Cant open file');
