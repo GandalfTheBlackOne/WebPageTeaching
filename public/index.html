@@ -19,11 +19,11 @@
 
     <div>App.jsx appear here.</div>
     <div id="contents"></div>
-    <script src="app.js"></script>
+    <script src="/App.js"></script>
     
     <div>test.jsx appear here</div>
     <div id="test"></div>
-    <script src="test.js"></script>
+    <script src="/test.js"></script>
 
 </body>
 </html>
@@ -31,7 +31,7 @@
     //using xlsx
     var xlsx = require("xlsx");
 
-        var wb = xlsx.readFile("../data/sj_master_2020_AUG_dummy.csv");
+        var wb = xlsx.readFile("../sj_master_2020_AUG_dummy.csv");
         var ws = wb.Sheets["1"];
         var workbook = xlsx.utils.sheet_to_json(ws);
 
@@ -50,7 +50,7 @@
         var fs = require('fs');
 
         var output = [];
-        fs.createReadStream('../data/sj_master_2020_AUG_dummy.csv').pipe(parse({
+        fs.createReadStream('../sj_master_2020_AUG_dummy.csv').pipe(parse({
             delimiter: ',',
             header: true
         }))
