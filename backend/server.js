@@ -11,7 +11,7 @@ fs.open(path, 'a', function(err, fd) {
     if(err) {
         console.log('Cant open file');
     }else{
-        fs.write(fd, buffer, 0, buffer.length, null, function(err, writtenbtyes) {
+        fs.write(fd, buffer, 0, buffer.length, null, function(err, writtenbytes) {
             if(err) {
                 console.log('cant write to file');
             }else {
