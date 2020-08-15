@@ -3,7 +3,8 @@
 var xlsx = require("xlsx");
 
 var wb = xlsx.readFile("../data/sj_master_2020_AUG_dummy.xlsx");
-var ws = wb.Sheets["1"];
+//console.log(wb.Sheets[wb.SheetNames]);
+var ws = wb.Sheets[wb.SheetNames];
 var data = xlsx.utils.sheet_to_json(ws);
 
 var desired_cell;
